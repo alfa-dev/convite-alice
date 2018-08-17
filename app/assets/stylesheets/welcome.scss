@@ -1,0 +1,103 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Merienda', cursive;
+  padding: 0px;
+  margin: 0px;
+  background: image_url('cherry_bg.jpg');
+  font-size: 14px;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+    background-color:white;
+    background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
+    linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
+    background-size:15px 15px;
+    height: 50px;
+    width: 100%;
+  }
+
+  &:before{ top: 0px; }
+  &:after{ bottom: 0px; height: 20px; z-index: -1; position: fixed;}
+}
+
+#alice_banner {
+  max-width: 100%;
+  position: relative;
+  // -webkit-transform: translateX(-50%);
+  //    -moz-transform: translateX(-50%);
+  //     -ms-transform: translateX(-50%);
+  //      -o-transform: translateX(-50%);
+  //         transform: translateX(-50%);
+}
+
+#chapeuzinho {
+  display: block;
+  width: 35%;
+  margin: 0 auto;
+}
+
+#content {
+  position: relative;
+  margin-top: -50px;
+
+  &:after, &:before {
+    content: "";
+    position: fixed;
+    background: image_url('arvore.png');
+    display: block;
+    width: 150px;
+    height: 256px;
+    top: 120px;
+  }
+  &:after  { left: -50px; }
+  &:before { right: -50px;}
+}
+
+#days_remaining{
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+   -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+     -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+  top: 0px;
+  background: #7a5d37;
+  border-radius: 10px;
+  padding: 1px 10px;
+  color: white;
+}
+
+#party_info {
+  position: relative;
+  border-radius: 10px;
+  display: block;
+  background: #fdfbd7;
+  color: #7a5d37;
+  padding: 10px;
+  margin: 20px;
+  margin-bottom: 100px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px dotted #7a5d37;
+  box-shadow: 0px 0px 0px 5px #fdfbd7;
+
+  .years {
+    color: #4a8632;
+    font-size: 18px;
+    display: block;
+    margin: 5px auto 10px;
+    text-align: center;
+  }
+}
