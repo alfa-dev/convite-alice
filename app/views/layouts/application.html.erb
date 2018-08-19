@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <meta name="theme-color" content="#db5945">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta property="og:site_name" content="Convite">
+    <meta property="og:title" content="Convite do primeiro aninho da Alice" />
+    <meta property="og:description" content="<%= @name << ', ' unless @name.nil? %> estamos te enviando um convite especial, clique aqui para ver as informações" />
+    <meta property="og:image" itemprop="image" content="https://convite-alice.herokuapp.com/thumbnail_300x200.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1432930" />
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Merienda:400,700" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
