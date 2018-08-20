@@ -4,6 +4,9 @@
 body, html {
   height: 100%;
   min-height: 100%;
+  font-size: 80%;
+
+  text-size-adjust: none;
 }
 
 body {
@@ -38,6 +41,12 @@ body {
   }
 }
 
+h1, #content, #party_info {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+
 @keyframes slide {
   0%{
     background-position: 0 0;
@@ -50,7 +59,7 @@ body {
 #alice_banner {
   max-width: 100%;
   position: relative;
-  margin: 0 auto;
+  margin: 10px auto;
   display: block;
   // -webkit-transform: translateX(-50%);
   //    -moz-transform: translateX(-50%);
@@ -99,12 +108,13 @@ body {
 
 #party_info {
   position: relative;
+  width: 90%;
   border-radius: 10px;
   display: block;
   background: #fdfbd7;
   color: #7a5d37;
   padding: 10px;
-  margin: 20px;
+  margin: 20px auto;
   margin-bottom: 100px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
