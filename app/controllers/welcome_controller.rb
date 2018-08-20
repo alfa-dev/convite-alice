@@ -12,4 +12,8 @@ class WelcomeController < ApplicationController
 
     @days_remaining = (Date.parse("2018-09-04") - Date.today).to_i
   end
+
+  def maps
+
+  end
 end
