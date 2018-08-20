@@ -31,6 +31,11 @@ body {
   &:after{ bottom: 0px; height: 20px; z-index: -1; position: fixed;}
 
   strong { font-size: 16px; }
+
+  a, address {
+    display: block;
+    text-align: center;
+  }
 }
 
 @keyframes slide {

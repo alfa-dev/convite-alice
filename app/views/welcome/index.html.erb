@@ -7,15 +7,23 @@
 <div id="party_info">
   <span id="days_remaining">Faltam <strong><%= @days_remaining %></strong> dias</span>
   <span class="years">🌼 Meu primeiro aninho 🌼</span>
-
-  Olá<strong><%= ', ' << @name unless @name.nil? %>!</strong><br>Gostaria de te convidar para comemorar comigo meu aniversário. Vai ser no dia <strong>04/09/2018</strong> às <strong>19:30 horas</strong>.
-
+  <p style="text-align:center">
+    No meu aniversário de 1 aninho 🎂 não vai ter lobo 🐺 nenhum, porque eu estou convidando minha avozinha<%= @prefix unless @prefix.nil? %><strong><%= @name unless @name.nil? %></strong> para comerem os 🍭doces🍬 aqui comigo!
+  </p>
   <p>
-    <strong>Local:</strong> Casa de festas <strong>Planeta Kids</strong> <br>
+    Data:<strong><time datetime="2018-09-04 19:30"> 04/09/2018</strong> às <strong>19:30 horas</strong></time> <br>
+    Local: Casa de festas <strong>Planeta Kids</strong> <br>
     <address>
       Estr. Gen. Canrobert Pereira da Costa, 92 - Realengo, Rio de Janeiro - RJ, 21710-400
     </address>
 
     <a href="https://goo.gl/maps/LBYrkFUrZfq">Clique aqui para ver o  mapa</a>
   </p>
+  <p>
+    <small>P.S. A vovozinha irá de Uber, não precisam se preocupar!</small>
+  </p>
+</div>
+
+<div>
+
 </div>
