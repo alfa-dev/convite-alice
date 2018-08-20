@@ -2,7 +2,8 @@ class WelcomeController < ApplicationController
   require 'base64'
 
   def index
-    @name = params[:n]
+
+    @name = params[:n].nil? ? 'você' : params[:n]
 
     if !@name.nil? && @name.include?(' e ') then
       @prefix = ", "
