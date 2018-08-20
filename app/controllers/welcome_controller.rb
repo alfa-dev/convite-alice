@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   def index
     @name = params[:n]
 
-    if(@name.include? ' e ')
+    if !@name.nil? && @name.include?(' e ') then
       @prefix = ", "
     else
       @prefix = " e "
