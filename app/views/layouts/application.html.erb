@@ -1,45 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Alice - 1 ano</title>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-  <meta name="theme-color" content="#db5945">
+  <head>
+    <title>Alice - 1 ano</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <meta name="theme-color" content="#db5945">
 
-  <meta property="og:site_name" content="Convite">
-  <meta property="og:title" content="1º Aniversário da Alice. Convite <%= 'para ' << @name unless @name.nil? %>" />
-  <meta property="og:description" content="Clique para mais informações." />
-  <meta property="og:image" itemprop="image" content="https://convite-alice.herokuapp.com/thumbnail_300x200.jpg">
-  <meta property="og:type" content="website" />
-  <meta property="og:updated_time" content="1432930" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:url" content="🎂" />
+    <meta property="og:site_name" content="Convite">
+    <meta property="og:title" content="1º Aniversário da Alice. Convite <%= 'para ' << @name unless @name.nil? %>" />
+    <meta property="og:description" content="Clique para mais informações." />
+    <meta property="og:image" itemprop="image" content="https://convite-alice.herokuapp.com/thumbnail_300x200.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1432930" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="🎂" />
 
-  <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/ico" href="favicon.ico" />
 
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <link href="https://fonts.googleapis.com/css?family=Merienda:400,700" rel="stylesheet">
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Merienda:400,700" rel="stylesheet">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-<body>
-  <%= yield %>
-</body>
+  <body>
+    <%= yield %>
+  </body>
 
-<!-- Etiqueta global do site (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124238471-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Etiqueta global do site (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124238471-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'UA-124238471-1');
-
-  var trackOutboundLink = function(url) {
-    ga('send', 'event', 'outbound', 'click', url, {
-     'transport': 'beacon',
-     'hitCallback': function(){document.location = url;}
-   });
-  }
-</script>
+      gtag('config', 'UA-124238471-1');
+    </script>
 </html>
