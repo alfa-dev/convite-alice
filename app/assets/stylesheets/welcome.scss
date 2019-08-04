@@ -31,6 +31,11 @@ body, html {
   height: 100%;
 }
 
+body, html, footer, main {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 body {
   background: #e6faff image_url('background.jpg') center center;
   background-size: cover;
@@ -47,35 +52,10 @@ main {
 footer {
   position: relative;
   flex-shrink: 0;
-  padding: 0 15px 15px 15px;
+  padding: 15px;
   background: #89c765;
   color: white;
-
-  &:before {
-    content: "";
-    width: 100%;
-    bottom: 85%;
-    position: absolute;
-    height: 0px;
-    border: solid 50px #65af44;
-    border-color: #65af44;
-    border-radius: 100%/80px 80px 0 0;
-    margin: -10px 0px 0px -30px;
-    transform: rotate(3deg);
-    z-index: -1;
-  }
-  &:after {
-    content: "";
-    width: 100%;
-    bottom: 85%;
-    position: absolute;
-    height: 0px;
-    border: solid 50px #89c765;
-    border-color: #89c765;
-    border-radius: 100%/80px 80px 0 0;
-    margin: -30px;
-    z-index: -1;
-  }
+  box-sizing: border-box;
 
   a {
     color: white;
@@ -86,8 +66,19 @@ footer {
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
-    margin-bottom: 15px;
-    margin-top: -20px;
+  }
+
+  .background-montain {
+    position: absolute;
+    bottom: 100%;
+    right: 0px;
+    z-index: -2;
+    width: 50%;
+    transform: translateY(15px);
+
+    img {
+      width: 100%;
+    }
   }
 
   .date, .time {
