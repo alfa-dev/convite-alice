@@ -5,13 +5,14 @@
 
   <div id="content">
     <p id="greetings">
-      Convite especial para,<br /><strong class="name"><%= "#{@name}"%></strong>.
+      Convite especial para:<br /><strong class="name"><%= "#{@name}"%></strong>
     </p>
   </div>
 
   <div id="mariana">
     <div class="mask">
       <%= image_tag("mariana.png", id: 'mariana_corpo_out') %>
+      <%= audio_tag('/alice_convida.mp3', id: 'convite_audio') %>
     </div>
 
     <div class="wrapper">
@@ -20,7 +21,6 @@
     </div>
   </div>
 </main>
-
 
 <footer>
   <time datetime="2019-09-07 15:00">
@@ -48,8 +48,8 @@
     <% end %>
 
     <address>
-      <p>Local: <strong>Condomínio Vert Vita</strong></p>
-      <%= link_to 'Estr. Rodrigues Caldas, 2055 - Taquara, Rio de Janeiro - RJ, 22713-374', "https://goo.gl/maps/GMNsNzL2hJaifF9q9" %>
+      <p>Local: <strong>Salão de Festas do Condomínio Vert Vita</strong></p>
+      <%= link_to 'Estr. Rodrigues Caldas, 2055 - Taquara, Rio de Janeiro - RJ, 22713-374', "https://goo.gl/maps/GMNsNzL2hJaifF9q9" %>.
     </address>
   </div>
   <div class="wrapper">
