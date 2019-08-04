@@ -1,132 +1,190 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: 'GROBOLD';
+  font-style: normal;
+  font-weight: normal;
+  src: local('/fonts/GROBOLD'), url('/fonts/GROBOLD.woff') format('woff');
+}
+@font-face {
+  font-family: 'VAG Rounded';
+  font-style: normal;
+  font-weight: normal;
+  src: local('/fonts/VAGRounded-BT'), url('/fonts/VAGRounded-BT.ttf') format('truetype');
+}
+
 body, html {
   height: 100%;
   min-height: 100%;
   font-size: 80%;
+  font-family: 'VAG Rounded', 'Lucida Sans','Lucida Grande','Lucida Sans Unicode',Arial,sans-serif;
+
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   text-size-adjust: none;
+
+  height: 100%;
 }
 
 body {
-  font-family: 'Merienda', cursive;
-  padding: 0px;
+  background: #e6faff image_url('background.jpg') center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
   margin: 0px;
-  background: image_url('cherry_bg.jpg');
-  font-size: 14px;
-  max-width: 100%;
-  overflow-x: hidden;
-  animation: slide 12s linear infinite;
-
-  &:after, &:before {
-    content: "";
-    position: absolute;
-    background-color:white;
-    background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 50%),
-    linear-gradient(rgba(200,0,0,.5) 50%, transparent 50%);
-    background-size:15px 15px;
-    height: 50px;
-    width: 100%;
-  }
-
-  &:before{ top: 0px; }
-  &:after{ bottom: 0px; height: 20px; z-index: -1; position: fixed;}
-
-  strong { font-size: 16px; }
-
-  a, address {
-    display: block;
-    text-align: center;
-  }
+  font-size: 15px;
 }
 
-h1, #content, #party_info {
-  max-width: 450px;
-  margin: 0 auto;
+main {
+  flex: 1 0 auto;
 }
 
-
-@keyframes slide {
-  0%{
-    background-position: 0 0;
-  }
-  100%{
-    background-position: -300px 0;
-  }
-}
-
-#alice_banner {
-  max-width: 100%;
+footer {
   position: relative;
-  margin: 10px auto;
-  display: block;
-  // -webkit-transform: translateX(-50%);
-  //    -moz-transform: translateX(-50%);
-  //     -ms-transform: translateX(-50%);
-  //      -o-transform: translateX(-50%);
-  //         transform: translateX(-50%);
+  flex-shrink: 0;
+  padding: 0 15px 15px 15px;
+  background: #89c765;
+  color: white;
+
+  &:before {
+    content: "";
+    width: 100%;
+    bottom: 85%;
+    position: absolute;
+    height: 0px;
+    border: solid 50px #65af44;
+    border-color: #65af44;
+    border-radius: 100%/80px 80px 0 0;
+    margin: -10px 0px 0px -30px;
+    transform: rotate(3deg);
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    width: 100%;
+    bottom: 85%;
+    position: absolute;
+    height: 0px;
+    border: solid 50px #89c765;
+    border-color: #89c765;
+    border-radius: 100%/80px 80px 0 0;
+    margin: -30px;
+    z-index: -1;
+  }
+
+  a {
+    color: white;
+  }
+
+  time {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    margin-top: -20px;
+  }
+
+  .date, .time {
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+    text-shadow: 2px 2px 2px #65af44, 4px 4px 2px #65af44;
+  }
+  .day, .hour {
+    font-size: 60px;
+    margin-top: -8px;
+  }
+  .gap {
+    background: transparent;
+    width: 0px;
+    margin: 8px 0px;
+    border: 1px dashed rgba(white, .7);
+  }
 }
 
-#chapeuzinho {
-  display: block;
-  width: 35%;
-  margin: 0 auto;
+h1, h2, h3 {
+  font-family: 'GROBOLD';
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: normal;
+  -webkit-text-stroke: 2px #ef2521;
+  font-size: 60px;
+  position: relative;
+  margin: 0px;
+
+  &:before {
+    color: transparent;
+    content: attr(data-text);
+    position: absolute;
+    z-index: 0;
+    font-size: inherit;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  &:after {
+    color: red;
+    content: attr(data-text);
+    position: absolute;
+    -webkit-text-stroke: 14px #613390;
+    z-index: -2;
+    font-size: inherit;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+h1, h3 {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 30px;
+
+  &:before {
+    text-shadow: 2px 2px 0px #fed20b;
+  }
+}
+
+h2 {
+  color: #fba833;
+  text-transform: lowercase;
+  margin-top: -15px;
+
+  &:before {
+    text-shadow: 2px 2px 0px #fba833;
+  }
+
+  .number {
+    position: absolute;
+  }
+}
+
+h3 {
+  margin-top:0px;
+  font-size: 80px;
+  z-index: 2;
 }
 
 #content {
-  position: relative;
-  margin-top: -50px;
-
-  &:after, &:before {
-    content: "";
-    position: fixed;
-    background: image_url('arvore.png');
-    display: block;
-    width: 150px;
-    height: 256px;
-    top: 120px;
-  }
-  &:after  { left: -50px; }
-  &:before { right: -50px;}
+  text-align: center;
 }
 
-#days_remaining{
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-   -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-     -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-  top: 0px;
-  background: #7a5d37;
-  border-radius: 10px;
-  padding: 1px 10px;
-  color: white;
-}
+#greetings {
+  margin-top: 15px;
+  color: #1fa0ca;
+  // background: rgba(white, .8);
+  text-shadow: 2px 2px 0px white,
+              -2px -2px 0px white,
+              0px -2px 0px white,
+              -2px 0px 0px white;
 
-#party_info {
-  position: relative;
-  width: 90%;
-  border-radius: 10px;
-  display: block;
-  background: #fdfbd7;
-  color: #7a5d37;
-  padding: 10px;
-  margin: 20px auto;
-  margin-bottom: 100px;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 2px dotted #7a5d37;
-  box-shadow: 0px 0px 0px 5px #fdfbd7;
-
-  .years {
-    color: #4a8632;
-    font-size: 18px;
-    display: block;
-    margin: 5px auto 10px;
-    text-align: center;
+  .name {
+    font-size: 25px;
+    letter-spacing: 1px;
   }
 }

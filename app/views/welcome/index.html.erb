@@ -1,26 +1,30 @@
-<h1><%= image_tag('alice_banner.png', id:'alice_banner') %></h1>
+<main>
+  <h1 data-text="Alice">Alice</h1>
+  <h2 data-text="conta">conta</h2>
+  <h3 data-text="2">2</h3>
 
-<div id="content">
-  <%= image_tag('chapeuzinho.png', id:'chapeuzinho') %>
-</div>
+  <div id="content">
+    <p id="greetings">
+      Convite especial para,<br /><strong class="name"><%= "#{@name}"%></strong>.
+    </p>
+  </div>
+</main>
 
-<div id="party_info">
-  <span id="days_remaining">😄☺ É HOJE! ☺️😄</span>
-  <span class="years">🌼 Meu primeiro aninho 🌼</span>
-  <p style="text-align:center">
-    No meu aniversário de 1 aninho 🎂 não vai ter lobo 🐺 nenhum, porque eu estou convidando minha avozinha<%= @prefix unless @prefix.nil? %><strong><%= @name unless @name.nil? %></strong> para comerem os 🍭doces🍬 aqui comigo!
-  </p>
-  <p>
-    Data:<strong><time datetime="2018-09-04 19:30"> 04/09/2018</strong> (terça-feira), às <strong>19:30 horas</strong></time> <br>
-    Local: Casa de festas <strong>Planeta Kids</strong> <br>
-    <address>
-      Estr. Gen. Canrobert Pereira da Costa, 92 - Realengo, Rio de Janeiro - RJ, 21710-400
-    </address>
+<footer>
+  <time datetime="2019-09-07 15:00">
+    <span class="date">
+      <span class="month">setembro</span>
+      <span class="day">07</span>
+    </span>
+    <span class="gap"></span>
+    <span class="time">
+      <span>às</span>
+      <span class="hour">15h</span>
+    </span>
+  </time>
 
-    <%= link_to 'Clique aqui para ver o mapa', "https://goo.gl/maps/LBYrkFUrZfq" %>
-
-  </p>
-  <p>
-    <small>P.S: A vovozinha irá de Uber, não precisam se preocupar!</small>
-  </p>
-</div>
+  <address>
+    <p>Local: <strong>Condomínio Vert Vita</strong></p>
+    <%= link_to 'Estr. Rodrigues Caldas, 2055 - Taquara, Rio de Janeiro - RJ, 22713-374', "https://goo.gl/maps/GMNsNzL2hJaifF9q9" %>
+  </address>
+</footer>
