@@ -37,8 +37,10 @@ body, html, footer, main {
 }
 
 body {
-  background: #e6faff image_url('background.jpg') center center;
+  background: #e6faff image_url('background.jpg');
   background-size: cover;
+  background-position: center 50px;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   margin: 0px;
@@ -67,17 +69,20 @@ footer {
     text-align: center;
     justify-content: space-around;
   }
+  svg {
+    width: 30px;
+  }
 
-  .background-montain {
-    position: absolute;
-    bottom: 100%;
-    right: 0px;
-    z-index: -2;
-    width: 50%;
-    transform: translateY(15px);
+  address {
+    font-style: normal;
+  }
 
-    img {
-      width: 100%;
+  .wrapper {
+    display: flex;
+
+    svg {
+      width: 55px;
+      padding: 30px 20px;
     }
   }
 
@@ -163,6 +168,7 @@ h3 {
 
 #content {
   text-align: center;
+  padding: 0px 15px;
 }
 
 #greetings {
@@ -177,5 +183,57 @@ h3 {
   .name {
     font-size: 25px;
     letter-spacing: 1px;
+  }
+}
+
+#mariana {
+  .mask {
+    position: absolute;
+    left: calc(50% + 6px);
+    transform: translate(-50%, 49px) scale(0.6);
+    z-index: 1;
+    height: 120px;
+    overflow: hidden;
+  }
+
+  .wrapper{
+    position: relative;
+    height: 350px;
+    margin: 0 auto;
+    width: 350px;
+    background: #fed20b;
+    transform: scale(0.6);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -70px;
+    margin-bottom: -50px;
+    border: 3px solid #ef2521;
+    box-shadow: 0px 0px 0px 7px #603390;
+
+    #mariana_corpo, #mariana_mao {
+      position: absolute;
+      bottom: 0px;
+      transform: translateX(-50%);
+    }
+
+    #mariana_corpo {
+      left: calc(50% + 10px);
+    }
+
+    #mariana_mao {
+      left: calc(50% + 80px);
+      animation: moveIt 2.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes moveIt {
+  0%, 100% {
+    transform: rotate(15deg);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: rotate(-30deg);
+    transform-origin: bottom;
   }
 }

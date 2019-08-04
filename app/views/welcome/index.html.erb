@@ -8,11 +8,21 @@
       Convite especial para,<br /><strong class="name"><%= "#{@name}"%></strong>.
     </p>
   </div>
+
+  <div id="mariana">
+    <div class="mask">
+      <%= image_tag("mariana.png", id: 'mariana_corpo_out') %>
+    </div>
+
+    <div class="wrapper">
+      <%= image_tag("mariana.png", id: 'mariana_corpo') %>
+      <%= image_tag("mariana_mao.png", id: 'mariana_mao') %>
+    </div>
+  </div>
 </main>
 
 
 <footer>
-  <div class="background-montain"><%= image_tag("montanhas-2.png") %></div>
   <time datetime="2019-09-07 15:00">
     <span class="date">
       <span class="month">setembro</span>
@@ -25,8 +35,31 @@
     </span>
   </time>
 
-  <address>
-    <p>Local: <strong>Condomínio Vert Vita</strong></p>
-    <%= link_to 'Estr. Rodrigues Caldas, 2055 - Taquara, Rio de Janeiro - RJ, 22713-374', "https://goo.gl/maps/GMNsNzL2hJaifF9q9" %>
-  </address>
+  <div class="wrapper">
+    <%= link_to "https://goo.gl/maps/GMNsNzL2hJaifF9q9" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 486.3 486.3" style="enable-background:new 0 0 486.3 486.3;" xml:space="preserve">
+        <g>
+          <path style="fill:#CD2A00;" d="M243.15,0v104.4c44.11,0,80,35.88,80,80c0,44.11-35.89,80-80,80v221.9l146.43-184.1   c26.29-33.25,40.19-73.21,40.19-115.58C429.77,83.72,346.05,0,243.15,0z"/>
+          <path style="fill:#D8D7DA;" d="M323.15,184.4c0-44.12-35.89-80-80-80v160C287.26,264.4,323.15,228.51,323.15,184.4z"/>
+          <path style="fill:#FF3501;" d="M163.15,184.4c0-44.12,35.89-80,80-80V0C140.25,0,56.53,83.72,56.53,186.62   c0,42.37,13.9,82.33,40.23,115.62L243.15,486.3V264.4C199.04,264.4,163.15,228.51,163.15,184.4z"/>
+          <path style="fill:#FFFFFF;" d="M163.15,184.4c0,44.11,35.89,80,80,80v-160C199.04,104.4,163.15,140.28,163.15,184.4z"/>
+        </g>
+      </svg>
+    <% end %>
+
+    <address>
+      <p>Local: <strong>Condomínio Vert Vita</strong></p>
+      <%= link_to 'Estr. Rodrigues Caldas, 2055 - Taquara, Rio de Janeiro - RJ, 22713-374', "https://goo.gl/maps/GMNsNzL2hJaifF9q9" %>
+    </address>
+  </div>
+
+  <p>
+    <strong>Por favor,</strong><br />
+    Mande seu nome completo e RG, para que possamos botar na lista de controle da entrada do condomínio.
+  </p>
+
+<!--   <p>
+    <strong>Estacionamento,</strong><br />
+    Existe um <%= link_to("Super Market", 'https://goo.gl/maps/qxsrGp8va4AwP8zu8') %> próximo ao condomínio, que tem um estacionamento bem grande, acredito que eles não se importaram de guardar mais alguns carros lá.
+  </p> -->
 </footer>
