@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  get '/g/:n', to:'welcome#generator'
   get '/:n', to:'welcome#index'
 end
